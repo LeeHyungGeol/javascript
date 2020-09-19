@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//여러 개의 데이터를 하나의 변수에 담아서 관리할 수 있는 방법 - 배열
+	// 대괄호([])는 배열을 만드는 기호이다. 대괄호 안에 데이터를 콤마(,)로 구분해서 나열하면 배열이 된다.
+	
+	//예제 1 - 배열의 문법
+	var member = ['egoing', 'k8805', 'sorialgi']
+	alert(member[0]); //내장함수
+	alert(member[1]);
+	alert(member[2]);
+
+	//예제 2 - 배열의 효용성
+	function get_array() {
+		return ['a', 'b', 'c'];
+	} 
+	
+	var array = get_array();
+	
+	alert(get_array[0]);
+	alert(get_array[1]);
+	alert(get_array[2]);
+
+	//예제 3 - 배열과 반복문
+	function get_members(){ //사용자 정의 함수
+    return ['egoing', 'k8805', 'sorialgi'];
+	}
+	
+	members = get_members();
+	
+	// members.length는 배열에 담긴 값의 숫자를 알려준다. 
+	for(i = 0; i < members.length; i++){
+    	// members[i].toUpperCase()는 members[i]에 담긴 문자를 대문자로 변환해준다.
+    	document.write(members[i].toUpperCase());   
+    	document.write('<br />');
+    	document.write(members.length); //members 배열에 담겨있는 원소(값)의 개수
+	}
+
+	//예제 4 - 배열의 추가
+	var li = ['a', 'b', 'c', 'd', 'e'];
+	li.push('f'); //push: 배열의 맨 뒤에 값을 추가
+	document.write(li);
+
+	li = li.concat(['g', 'h']); //concat: 복수의 원소를 배열에 추가하는 방법, 인자로 전달된 값을 배열에 추가
+	document.write(li);
+
+	li.unshift('z'); //unshift: 배열의 맨 앞에 원소를 추가
+	document.write(li);
+
+	var arr = ['a', 'b', 'c']
+	a.splice(1, 0, 'd'); // a d b c
+
+	var arr2 = ['a', 'b', 'c']
+	b.splice(1, 1, 'x', 'y') //a x y c
+
+	//예제 5  - 배열의 제거, 정렬
+	var arr3 = ['a', 'b', 'c', 'd', 'e'];
+	arr3.shift(); //b c d e
+	arr3.pop(); //b c d
+
+	//예제 5  - 배열의 정렬
+	var arr4 = ['c', 'e', 'a', 'd', 'b'];
+	arr4.sort() //a b c d e
+	arr4.reverse() //e d c b a
+	
+</script>
+</body>
+</html>
