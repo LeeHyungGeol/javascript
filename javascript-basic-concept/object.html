@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	// 배열은 아이템에 대한 식별자로 숫자를 사용했다. 데이터가 추가되면 배열 전체에서 중복되지 않는 인덱스가 자동으로 만들어져서 추가된 데이터에 대한 식별자가 된다. 
+	// 이 인덱스를 이용해서 데이터를 가져오게 되는 것이다. 만약 인덱스로 문자를 사용하고 싶다면 객체(dictionary)를 사용해야 한다. 
+	// 다른 언어에서는 연관배열(associative array) 또는 맵( map), 딕셔너리(Dictionary)라는 데이터 타입이 객체에 해당한다.
+
+
+//객체를 만드는 법 1
+var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+//egoing은 key가 되고, 10은 value가 된다. 
+
+//객체를 만드는 법 2
+var grades = {};
+grades['egoing'] = 10;
+grades['k8805'] = 6;
+grades['sorialgi'] = 80;
+
+//객체를 만드는 법 3
+var grades = new Object();
+grades['egoing'] = 10;
+grades['k8805'] = 6;
+grades['sorialgi'] = 80;
+
+//객체와 반복문
+var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+for(var name in grades) {
+    document.write("key : "+ name +" value : "+grades[key]+"<br />");
+}
+
+//객체 지향 프로그래밍
+var obj = {
+	'list' : {'a' : 30, 'b' : 22, 'c': 1},
+	'show' : function() {
+		for(var name in this.list){
+            document.write(name+':'+this.list[name]+"<br />");
+        }
+	}
+}
+alert(obj['list']['b']);
+obj['show']();
+obj.show();
+
+</script>
+</body>
+</html>
